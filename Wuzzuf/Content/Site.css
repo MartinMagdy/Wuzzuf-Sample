@@ -6,7 +6,8 @@
     border: 0px;
     font-family: Vijaya;
     font-size: large;
-    outline:none;
+    outline: none;
+    outline: unset;
 }
 .navbar-default .navbar-toggle {
     border-color: #0a5a90;
@@ -286,16 +287,11 @@ a:hover, a:focus {
     font-size: large;
 }
 
-.searchName {
-    width: 400px;
-    height: 30px;
+#searchname {
+    width: 130px;
     border: 2px solid #ccc;
     border-radius: 5px;
     background-color: white;
-    /*position:relative; right:500px;top:-40px;*/
-    margin-left: 400px;
-    margin-top: -20px;
-    padding: 7px;
     outline: unset;
 }
 
