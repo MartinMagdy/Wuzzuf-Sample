@@ -6,6 +6,10 @@
     border: 0px;
     font-family: Vijaya;
     font-size: large;
+    outline:none;
+}
+.navbar-default .navbar-toggle {
+    border-color: #0a5a90;
 }
 a{
     outline:none;
