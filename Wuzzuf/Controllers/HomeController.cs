@@ -172,13 +172,13 @@ namespace Wuzzuf.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Search(string searchName)
+        public ActionResult Search(string searchname)
         {
-            var Result = db.Jobs.Where(a => a.JobTitle.Contains(searchName)
-              || a.JobContent.Contains(searchName)
-              || a.JobTitle.Contains(searchName)
-              || a.Category.CategoryName.Contains(searchName)
-              || a.Category.CategoryDescription.Contains(searchName)).ToList();
+            var Result = db.Jobs.Where(a => a.JobTitle.Contains(searchname)
+              || a.JobContent.Contains(searchname)
+              || a.JobTitle.Contains(searchname)
+              || a.Category.CategoryName.Contains(searchname)
+              || a.Category.CategoryDescription.Contains(searchname)).ToList();
           
             return View(Result);
         }

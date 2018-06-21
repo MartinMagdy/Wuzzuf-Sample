@@ -293,6 +293,12 @@ a:hover, a:focus {
     border-radius: 5px;
     background-color: white;
     outline: unset;
+    padding:3px;
+    margin-top:8px;
+    transition:width 0.4s ease-in-out;
+}
+#searchname:focus{
+    width: 100%;
 }
 
 .img-size {
