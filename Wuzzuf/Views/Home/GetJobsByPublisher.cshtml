@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Wuzzuf.Models.JobsViewModel>
+
+@foreach (var gr in Model)
+{
+<h3>
+    @gr.JobTitle
+</h3>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>
+                Applier Name
+            </th>
+            <th>
+                Message
+            </th>
+            <th>
+                Apply Date
+            </th>
+        </tr>
+        @foreach (var item in gr.Items)
+        {
+        <tr>
+            <td>
+                @item.User.UserName
+            </td>
+            <td>
+                @item.Message
+            </td>
+            <td>
+                @item.ApplyDate
+            </td>
+        </tr>
+        }
+    </table>
+
+}

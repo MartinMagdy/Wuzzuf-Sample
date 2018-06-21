@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Wuzzuf.Models.Job>
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+
+    <div class="panel panel-default" style="padding:15px;">
+        <h1 class="panel-heading">Search Results</h1>
+        <div class="row">
+            @foreach (var SubItem in Model)
+            {
+
+                <div class="col-md-3 thumbnail" style="margin-left:25px;margin-bottom:35px;">
+                    <img src="~/Uploads/@SubItem.JobImage" />
+                    <h3>@Html.DisplayFor(modelItem => SubItem.JobTitle)</h3>
+                    <h5>@Html.DisplayFor(modelItem => SubItem.JobContent)</h5>
+                    @Html.ActionLink("Details", "Details", new { JobId = SubItem.Id }, new { @class = "btn btn-primary" })
+                </div>
+
+            }
+        </div>
+    </div>

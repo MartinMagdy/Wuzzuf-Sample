@@ -1,0 +1,306 @@
+﻿body {
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    outline: 0px;
+    border: 0px;
+    font-family: Vijaya;
+    font-size: large;
+}
+a{
+    outline:none;
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+a:focus {
+        color: black;
+        text-decoration: none;
+        outline: none;
+        background-color: #428bca;
+    }
+.navbar-default {
+    background-color: #0a5a90;
+    border-color: #e7e7e7;
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+    height: 75px;
+    padding-top: 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+    .navbar-default .navbar-nav > li > a:hover {
+        color: black;
+    }
+
+.CheckBox {
+    outline: 0px;
+}
+a:hover, a:focus {
+    color: black;
+    text-decoration: none;
+    outline: none;
+    background-color: #0a5a90;
+}
+.sticky {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    outline: 0px;
+}
+
+.navtop {
+    width: 100%;
+    height: 93px;
+    background-color: #0c5c82;
+    margin-bottom: 65px;
+    margin-top: 0px;
+    outline: 0px;
+    z-index: 1000;
+}
+
+.logo {
+    margin-left: 33px;
+    float: left;
+    margin-right: 150px;
+    outline: 0px;
+}
+
+.menue menu a {
+    width: 40px;
+    height: 30px;
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+    line-height: 60px;
+    text-align: right;
+    float: right;
+    margin-right: 100px;
+    font-family: Vijaya;
+    font-size: 20px;
+    outline: 0px;
+    z-index: 1000;
+}
+
+    .menue menu a:hover {
+        text-decoration: double;
+        font-weight: bold;
+    }
+
+
+.login_button a {
+    width: auto;
+    height: 50px;
+    text-align: center;
+    float: left;
+    z-index: 100;
+    font-family: Vijaya;
+    font-size: 20px;
+    color: black;
+    border-radius: 15px;
+    line-height: 60px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    position: relative;
+    top: -50px;
+}
+
+.login_button:hover {
+    color: black;
+    text-decoration: double;
+    font-weight: bolder;
+}
+
+.logoff_button a {
+    width: auto;
+    height: 50px;
+    text-align: left;
+    float: left;
+    z-index: 100;
+    font-family: Vijaya;
+    font-size: 20px;
+    color: black;
+    line-height: 60px;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    position: relative;
+    top: -50px;
+    right: 1400px;
+    margin-left: 80px;
+}
+
+/*.logoff_button a:hover {
+        color: black;
+        text-decoration: double;
+        font-weight: bolder;
+    }*/
+
+.body {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    outline: 0px;
+    margin-top: 170px;
+}
+
+.social {
+    width: 100%;
+    height: 210px;
+    clear: right;
+    margin-left: 1860px;
+    position: fixed;
+    margin-top: 158px;
+    outline: 0px;
+}
+
+
+    .social a img {
+        width: 40px;
+        height: 40px;
+        clear: right;
+        outline: 0px;
+    }
+
+.body_nasted {
+    width: 80%;
+    height: auto;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 0px;
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    background-image: url("../Photos/Signature.jpg");
+    background-position-x: right;
+    background-repeat: no-repeat;
+    border-top: solid 2px black;
+    margin-top: 65px;
+}
+
+.myFooter {
+    background-color: cornflowerblue;
+    padding: 25px;
+    width: 100%;
+    height: auto;
+    margin-top: 65px;
+}
+
+.subFooter {
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: auto;
+}
+
+.from_ContactUs {
+    border-radius: 7px;
+    margin-top: 100px;
+    margin-bottom: 35px;
+    height: 50px;
+    line-height: 30px;
+    outline: 0px;
+    font-size: 20px;
+    font-family: Vijaya;
+}
+
+.mailBody {
+    border-radius: 7px;
+    margin-bottom: 35px;
+    height: 250px;
+    outline: 0px;
+    font-size: 20px;
+    font-family: Vijaya;
+    text-align: left;
+    line-height: 3000px;
+}
+
+.mailBTN {
+    width: 140px;
+    height: 70px;
+    background-color: #A613AA;
+    color: white;
+    border-radius: 7px;
+    margin-bottom: 35px;
+}
+
+.subject_ContactUs {
+    border-radius: 7px;
+    margin-bottom: 35px;
+    height: 50px;
+    line-height: 30px;
+    outline: 0px;
+    font-size: 20px;
+    font-family: Vijaya;
+}
+
+.fullName_ContactUs {
+    border-radius: 7px;
+    margin-bottom: 35px;
+    height: 50px;
+    line-height: 30px;
+    outline: 0px;
+    font-size: 20px;
+    font-family: Vijaya;
+}
+
+.line ul li a {
+    text-decoration: none;
+    text-decoration-color: black;
+    color: black;
+    font-family: Vijaya;
+    font-size: large;
+}
+
+    .line ul li a:hover {
+        text-decoration: double;
+        font-weight: bold;
+    }
+
+.line p {
+    text-decoration: none;
+    text-decoration-color: black;
+    color: black;
+    font-family: Vijaya;
+    font-size: large;
+}
+
+.searchName {
+    width: 400px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    /*position:relative; right:500px;top:-40px;*/
+    margin-left: 400px;
+    margin-top: -20px;
+    padding: 7px;
+    outline: unset;
+}
+
+.img-size {
+    font-size: 90px;
+}
+
+.navbar-user {
+    padding: 10px;
+    padding-bottom: 0px;
+    width: 350px;
+}

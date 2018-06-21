@@ -1,0 +1,85 @@
+﻿@using Microsoft.AspNet.Identity
+@using Wuzzuf.Models;
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = " nav ,navbar-nav, navbar-left" }))
+    {
+        var db = new ApplicationDbContext();
+        var UserId = User.Identity.GetUserId();
+        var CurrentUser = db.Users.Where(a => a.Id == UserId).SingleOrDefault();
+        @Html.AntiForgeryToken()
+        <div class="nav navbar-nav navbar-left">
+            <ul class=" navbar-left" style="padding:23px;">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <strong>Hello : MyDear</strong>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="navbar-user">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <p class="text-center" style="margin:0px;">
+                                            <span class="glyphicon glyphicon-user img-size"></span>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="text-left" style="margin:0px;text-align:left">
+                                            <strong>
+                                                @CurrentUser.UserName
+                                            </strong>
+                                        </p>
+                                        @if (CurrentUser.Type == "Hire SomeOne")
+                                        {
+                                            <a href="~/Home/GetJobsByPublisher" class="btn btn-success btn-block">Posted Jobs</a>
+                                            <a href="~/Jobs/Create" class="btn btn-success btn-block">Post Job</a>
+                                        }
+                                        else
+                                        {
+                                            <a href="~/Home/GetJobByUser" class="btn btn-success btn-block">Applied Jobs</a>
+                                        }
+                                        <a href="~/Account/EditeProfile" class="btn btn-primary btn-block">Edite Accounte</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div style="padding:10px;">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p>
+                                            <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-danger btn-block glyphicon glyphicon-log-out"style="height:auto; padding:4px;"> LogOut</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-left">
+        <li>
+            <a href="~/Account/Login">
+                <i class="glyphicon glyphicon-user"></i>
+                LogIn
+            </a>
+        </li>
+        <li>
+            <a href="~/Account/Register">
+                <i class="glyphicon glyphicon-lock"></i>
+                Regester
+            </a>
+        </li>
+    </ul>
+
+}
+

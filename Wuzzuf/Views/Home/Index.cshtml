@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Wuzzuf.Models.Category>
+@{
+               
+
+                ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron alert alert-info">
+    <h1>Welcom To Wuzzuf</h1>
+    <p class="lead">Wuzzuf Is a working Web site which will help to if you need to hire some one or searching for a job in all kind of fields</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">More Details &raquo;</a></p>
+</div>
+
+@foreach (var item in Model)
+{
+<div class="panel panel-info"style="padding:15px;">
+    <div class="panel-heading"><h1>@Html.DisplayFor(modelItem => item.CategoryName)</h1></div>
+
+    
+    <div class="row panel-body">
+        <h5>@Html.DisplayFor(modelItem => item.CategoryDescription)</h5>
+        @foreach (var SubItem in item.Jobs)
+    {
+
+        <div class="col-md-3 thumbnail" style="margin-left:25px;margin-bottom:35px;min-height:380px;">
+            <img src="~/Uploads/@SubItem.JobImage" />
+            <h3>@Html.DisplayFor(modelItem => SubItem.JobTitle)</h3>
+            <h5>@Html.DisplayFor(modelItem => SubItem.JobContent)</h5>
+            @Html.ActionLink("Details", "Details", new { JobId = SubItem.Id }, new { @class = "btn btn-primary" })
+        </div>
+
+}
+    </div>
+</div>
+}
